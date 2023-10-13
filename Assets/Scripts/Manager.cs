@@ -317,6 +317,7 @@ public class Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         day++;
+        Debug.Log(1);
         indicatorScript.ChangeAnimation(2);
         noteBookScript.ChangeAnimation(2);
         inventoryScript.ChangeAnimation(2);
