@@ -5909,7 +5909,7 @@ GameObject:
   - component: {fileID: 448035047}
   - component: {fileID: 448035046}
   - component: {fileID: 448035045}
-  - component: {fileID: 448035048}
+  - component: {fileID: 448035049}
   m_Layer: 5
   m_Name: Arrow Right
   m_TagString: Untagged
@@ -5990,6 +5990,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 448035049}
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &448035046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6027,7 +6038,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448035043}
   m_CullTransparentMesh: 1
---- !u!114 &448035048
+--- !u!114 &448035049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6036,28 +6047,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 448035043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 5656602154d14f240b7dd1336211bdf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 2023300085
-      Data2: 1137203509
-      Data3: -526592326
-      Data4: -576956493
-    Path: event:/Browing
-  Event: 
-  PlayEvent: 17
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  soundEvent: event:/Browing
 --- !u!1 &458239216
 GameObject:
   m_ObjectHideFlags: 0
@@ -18588,6 +18581,7 @@ GameObject:
   - component: {fileID: 1333290822}
   - component: {fileID: 1333290821}
   - component: {fileID: 1333290820}
+  - component: {fileID: 1333290823}
   m_Layer: 5
   m_Name: Arrow Left
   m_TagString: Untagged
@@ -18668,6 +18662,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1333290823}
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1333290821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18705,6 +18710,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333290818}
   m_CullTransparentMesh: 1
+--- !u!114 &1333290823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333290818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5656602154d14f240b7dd1336211bdf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Browing
 --- !u!1 &1333485468
 GameObject:
   m_ObjectHideFlags: 0
