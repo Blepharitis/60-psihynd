@@ -31,11 +31,9 @@ public class Inventory : MonoBehaviour
         {
             case 1:
                 animator.SetTrigger("open");
-                FMODUnity.RuntimeManager.PlayOneShot("event:/BagOpen"); //ќзвучка анимаций
                 break;
             case 2:
                 animator.SetTrigger("close");
-                FMODUnity.RuntimeManager.PlayOneShot("event:/BagClosed");
                 break;
         }
     }

@@ -50,7 +50,8 @@ public class Menu : MonoBehaviour
         }
         for (int i = 0; i < openSettings.transform.childCount; i++)
         {
-            openSettings.transform.GetChild(i).GetComponent<Button>().interactable = active;
+            if(openSettings.transform.GetChild(i).GetComponent<Button>())
+                openSettings.transform.GetChild(i).GetComponent<Button>().interactable = active;
         }
         buttonSettings.interactable = active;
         buttonPlay.interactable = active;

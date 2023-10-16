@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -136,6 +137,9 @@ public class Manager : MonoBehaviour
     public bool pepperDead = false;
     public bool demianDead = false;
     public bool victorDead = false;
+    [Header("MovedItems")]
+    public GameObject[] BedSideC;
+    public GameObject[] BedSideD;
 
     public Item item;
     public Item item2;
@@ -317,7 +321,16 @@ public class Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         day++;
-        Debug.Log(1);
+        foreach (GameObject sideC in BedSideC)
+        {
+            sideC.SetActive(false);
+        }
+        BedSideC[Random.Range(0, BedSideC.Length)].SetActive(true);
+        foreach (GameObject sideD in BedSideD)
+        {
+            sideD.SetActive(false);
+        }
+        BedSideD[Random.Range(0, BedSideD.Length)].SetActive(true);
         indicatorScript.ChangeAnimation(2);
         noteBookScript.ChangeAnimation(2);
         inventoryScript.ChangeAnimation(2);
@@ -852,5 +865,9 @@ public class Manager : MonoBehaviour
                 isEvent = false;
             }
         }
+    }
+    public void Exit()
+    {
+        SceneManager.LoadScene(0);
     }
 }

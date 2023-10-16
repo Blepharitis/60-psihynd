@@ -121,12 +121,9 @@ public class Notebook : MonoBehaviour
         {
             case 1:
                 animator.SetTrigger("open");
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Openboook"); //Звук открытия и закрытия инвентаря
-
                 break;
             case 2:
                 animator.SetTrigger("close");
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Openboook");
                 break;
         }
     }
